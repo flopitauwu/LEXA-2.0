@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LEXA — Academic Control for Law Queens</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">
+        <div class="logo-badge">⚖️</div>
+        <div>LEXA 💜</div>
+      </div>
+      <div class="tagline">Academic Control for Law Queens</div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-view="dashboard">🏠 Dashboard</button>
+      <button class="nav-btn" data-view="calculator">📊 Calculadora</button>
+      <button class="nav-btn" data-view="planner">📅 Planificador</button>
+      <button class="nav-btn" data-view="history">📚 Historial</button>
+    </nav>
+
+    <div class="sidebar-footer">localStorage ✅ (no se borra al cerrar)</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="semester-box">
+        <label for="semesterSelect">Semestre</label>
+        <select id="semesterSelect"></select>
+        <button id="newSemesterBtn" class="btn btn-ghost" title="Crear semestre nuevo">➕ Nuevo</button>
+      </div>
+
+      <div class="row top-actions">
+        <button id="exportBtn" class="btn btn-ghost">⬇️ Exportar</button>
+        <label class="btn btn-ghost file-label">
+          ⬆️ Importar
+          <input id="importInput" type="file" accept="application/json" hidden>
+        </label>
+        <button id="resetBtn" class="btn btn-danger">🗑️ Reset</button>
+      </div>
+    </header>
+
+    <section id="view-dashboard" class="view"></section>
+    <section id="view-calculator" class="view hidden"></section>
+    <section id="view-planner" class="view hidden"></section>
+    <section id="view-history" class="view hidden"></section>
+
+    <footer class="footer">LEXA • bonita, simple, funcional</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
